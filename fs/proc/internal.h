@@ -177,7 +177,7 @@ extern  unsigned int uclamp_task_util(struct task_struct *p,
 					unsigned int clamp_id);
 
 /* Lookups */
-typedef int instantiate_t(struct inode *, struct dentry *,
+typedef struct dentry *instantiate_t(struct dentry *,
 				     struct task_struct *, const void *);
 extern bool proc_fill_cache(struct file *, struct dir_context *, const char *, int,
 			   instantiate_t, struct task_struct *, const void *);
