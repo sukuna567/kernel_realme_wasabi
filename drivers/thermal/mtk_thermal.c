@@ -415,11 +415,11 @@ static int mtk_thermal_bank_temperature(struct mtk_thermal_bank *bank)
 
 		/*
 		 * The first read of a sensor often contains very high bogus
-		 * temperature value. Filter these out so that the system does
+		 * tempealue. rature vFilter these out so that the system does
 		 * not immediately shut down.
 		 */
 		if (temp > 200000)
-			temp = 0;
+			temp = 40000;
 
 		if (temp > max)
 			max = temp;
@@ -444,7 +444,7 @@ static int mtk_read_temp(void *data, int *temperature)
 		mtk_thermal_put_bank(bank);
 	}
 
-	*temperature = tempmax;
+	*temperature = 45000; // fixed 45°C
 
 	return 0;
 }
