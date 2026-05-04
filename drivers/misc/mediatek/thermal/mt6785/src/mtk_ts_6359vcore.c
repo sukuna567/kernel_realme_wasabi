@@ -52,7 +52,7 @@ static int polling_factor2 = 10000;
 
 static unsigned int interval = 1;	/* seconds, 0 : no auto polling */
 static unsigned int trip_temp[10] = { 150000, 110000, 100000, 90000, 80000,
-					70000, 65000, 60000, 55000, 50000 };
+					70000, 70000, 70000, 70000, 70000 };
 
 static unsigned int cl_dev_sysrst_state;
 static struct thermal_zone_device *thz_dev;
