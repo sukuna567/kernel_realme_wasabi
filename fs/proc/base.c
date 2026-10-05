@@ -1789,7 +1789,7 @@ static int do_proc_readlink(struct path *path, char __user *buffer, int buflen)
 	return len;
 }
 
-static int proc_pid_readlink(struct dentry * dentry, char __user * buffer, int buflen)
+static int proc_pid_readlink(struct dentry *dentry, char __user * buffer, int buflen)
 {
 	int error = -EACCES;
 	struct inode *inode = d_inode(dentry);
@@ -3412,7 +3412,7 @@ void proc_flush_task(struct task_struct *task)
 	}
 }
 
-static struct dentry *proc_pid_instantiate(struct dentry * dentry,
+static struct dentry *proc_pid_instantiate(struct dentry *dentry,
 				   struct task_struct *task, const void *ptr)
 {
 	struct inode *inode;
@@ -3432,7 +3432,7 @@ static struct dentry *proc_pid_instantiate(struct dentry * dentry,
 	return d_splice_alias(inode, dentry);
 }
 
-struct dentry *proc_pid_lookup(struct inode *dir, struct dentry * dentry, unsigned int flags)
+struct dentry *proc_pid_lookup(struct inode *dir, struct dentry *dentry, unsigned int flags)
 {
 	struct task_struct *task;
 	unsigned tgid;
@@ -3745,7 +3745,7 @@ static struct dentry *proc_task_instantiate(struct dentry *dentry,
 	return d_splice_alias(inode, dentry);
 }
 
-static struct dentry *proc_task_lookup(struct inode *dir, struct dentry * dentry, unsigned int flags)
+static struct dentry *proc_task_lookup(struct inode *dir, struct dentry *dentry, unsigned int flags)
 {
 	struct task_struct *task;
 	struct task_struct *leader = get_proc_task(dir);
