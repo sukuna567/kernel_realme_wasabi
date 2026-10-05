@@ -11265,7 +11265,6 @@ static void opluschg_usbtemp_dischg(void)
 	if (oplus_vooc_get_fastchg_started() == true) {
 		oplus_chg_set_chargerid_switch_val(0);
 		oplus_vooc_switch_mode(NORMAL_CHARGER_MODE);
-		oplus_vooc_reset_mcu();
 	}
 
 	g_oplus_chip->chg_ops->charging_disable();

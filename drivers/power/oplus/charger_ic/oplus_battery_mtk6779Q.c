@@ -2563,7 +2563,6 @@ static int oplus_usbtemp_dischg_action(struct oplus_chg_chip *chip)
 	if (oplus_vooc_get_fastchg_started() == true) {
 		oplus_chg_set_chargerid_switch_val(0);
 		oplus_vooc_switch_mode(NORMAL_CHARGER_MODE);
-		oplus_vooc_reset_mcu();
 		//msleep(20);//wait for turn-off fastchg MOS
 	}
 	usleep_range(10000,10000);///msleep(10);

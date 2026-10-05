@@ -2691,7 +2691,6 @@ static int oplus_usbtemp_monitor_main(void *data)
 					if (oplus_vooc_get_fastchg_started() == true) {
 						oplus_chg_set_chargerid_switch_val(0);
 						oplus_vooc_switch_mode(NORMAL_CHARGER_MODE);
-						oplus_vooc_reset_mcu();
 						//msleep(20);//wait for turn-off fastchg MOS
 					}
 					//chip->chg_ops->charging_disable();
@@ -2742,7 +2741,6 @@ static int oplus_usbtemp_monitor_main(void *data)
 							if (oplus_vooc_get_fastchg_started() == true) {
 								oplus_chg_set_chargerid_switch_val(0);
 								oplus_vooc_switch_mode(NORMAL_CHARGER_MODE);
-								oplus_vooc_reset_mcu();
 								//msleep(20);//wait for turn-off fastchg MOS
 							}
 							//chip->chg_ops->charging_disable();
