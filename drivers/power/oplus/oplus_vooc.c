@@ -1163,7 +1163,6 @@ static void oplus_vooc_fastchg_func(struct work_struct *work)
 		oplus_chg_set_chargerid_switch_val(0);
 		chip->vops->set_switch_mode(chip, NORMAL_CHARGER_MODE);
 		oplus_vooc_set_mcu_sleep();
-		oplus_vooc_reset_mcu();
 		oplus_vooc_del_watchdog_timer(chip);
 		oplus_vooc_set_awake(chip, false);
 		oplus_chg_unsuspend_charger();
