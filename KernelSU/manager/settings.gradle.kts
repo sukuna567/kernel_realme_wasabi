@@ -19,6 +19,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ReSukiSU"
+rootProject.name = "BakaSU"
 include(":app")
+include(":baselineprofile")
 include(":lint-rules")

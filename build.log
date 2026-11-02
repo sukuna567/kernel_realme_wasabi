@@ -1,4 +1,4 @@
-make[1]: Entering directory '/workspaces/android_kernel_realme_nemo/out'
+make[1]: Entering directory '/workspaces/kernel_realme_wasabi/out'
   GEN     ./Makefile
   HOSTCC  scripts/basic/fixdep
   HOSTCC  scripts/basic/bin2c
@@ -10,74 +10,159 @@ scripts/kconfig/conf  --silentoldconfig Kconfig
   GEN     ./Makefile
   CHK     include/generated/uapi/linux/version.h
 ../net/Makefile:24: CC cannot link executables. Skipping bpfilter.
-  CHK     scripts/mod/devicetable-offsets.h
   Using .. as source for kernel
   CHK     include/generated/utsrelease.h
-..
-..
+  CHK     scripts/mod/devicetable-offsets.h
   CHK     include/generated/timeconst.h
   CHK     include/generated/bounds.h
-..
-  CHK     include/generated/asm-offsets.h
-  CALL    ../scripts/checksyscalls.sh
-..
-..
-..
-  CHK     include/generated/compile.h
-  CHK     kernel/config_data.h
--- ReSukiSU version code: 784130
--- ReSukiSU version name: V3.0-82f20ba8-dirty@ReSukiSU
--- Supported Unofficial Manager: MKSU, RKSU, KOWSU, SukiSU-Ultra, ReSukiSU 
+-- BakaSU version code: 35257
+-- BakaSU version name: v4.2.0-516d3e87
+-- Supported Managers: KernelSU Official, MKSU, RKSU, SukiSU-Ultra, KOWSU, BakaSU 
 -- KERNEL_VERSION: 4.14
 -- KERNEL_TYPE: Non-GKI
--- ReSukiSU: using SuSFS Inline hook
--- ReSukiSU/susfs_inline: ksu_handle_setresuid found
--- ReSukiSU/susfs_inline: ksu_handle_execveat found
--- ReSukiSU/susfs_inline: ksu_handle_faccessat found
--- ReSukiSU/susfs_inline: ksu_handle_sys_read found
--- ReSukiSU/susfs_inline: ksu_handle_stat found
--- ReSukiSU/susfs_inline: ksu_handle_sys_reboot found
--- ReSukiSU/susfs_inline: ksu_handle_input_handle_event found
+-- BakaSU: using SuSFS Inline hook
+-- You are using SUSFS, if you face any issues, please MAKE SURE you are using LATEST SUSFS KERNEL SIDE before submit issue to BakaSU.
+-- We keep tracking simonpunk's latest changes, and don't maintain ANY backward compatibility for old version of susfs.
+  CHK     include/generated/asm-offsets.h
+  CALL    ../scripts/checksyscalls.sh
+-- BakaSU/susfs_inline: ksu_handle_setresuid found
+-- BakaSU/susfs_inline: ksu_handle_execveat found
+-- BakaSU/susfs_inline: ksu_handle_faccessat found
+-- BakaSU/susfs_inline: ksu_handle_sys_read found
+-- BakaSU/susfs_inline: ksu_handle_stat found
+-- BakaSU/susfs_inline: ksu_handle_sys_reboot found
+-- BakaSU/susfs_inline: ksu_handle_input_handle_event found
 
--- SUSFS_VERSION: v2.2.0
--- ReSukiSU/compat: current_sid found
--- ReSukiSU/compat: selinux_state found
--- ReSukiSU/compat: strncpy found
--- ReSukiSU/compat: kernel_read found
--- ReSukiSU/compat: kernel_write found
--- ReSukiSU/compat: path_umount found
--- ReSukiSU/compat: selinux_inode found
--- ReSukiSU/compat: selinux_cred found
--- ReSukiSU/compat: seccomp_filter_count found
--- ReSukiSU/compat: security_inode_init_security_anon found
--- ReSukiSU/compat: file_inode() found
--- ReSukiSU/compat: ns_get_path found
--- ReSukiSU/compat: modern dentry_open found
--- ReSukiSU/compat: ext4_unregister_sysfs found
--- ReSukiSU/compat: f_op->read_iter found
--- ReSukiSU/compat: iterate_dir found
--- ReSukiSU/compat: modern static_key_interface found
--- ReSukiSU/compat: d_inode found
--- ReSukiSU/compat: inode_lock found
--- ReSukiSU/compat: modern errno file found
--- ReSukiSU/compat: overflow.h found
--- ReSukiSU/compat: modern proc ns header file found
--- ReSukiSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_ROUTE found!!
--- ReSukiSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_GETNEIGH found!!
--- ReSukiSU/compat: found sidtab as reference
--- ReSukiSU/compat: found hlist in security_hook_list
--- ReSukiSU/compat: found required provide lsm name
--- ReSukiSU/compat: found security_add_hooks
+-- SUSFS_VERSION: v2.3.0
+-- BakaSU/compat: current_sid found
+-- BakaSU/compat: selinux_state found
+-- BakaSU/compat: strncpy found
+-- BakaSU/compat: kernel_read found
+-- BakaSU/compat: kernel_write found
+-- BakaSU/compat: selinux_inode found
+-- BakaSU/compat: selinux_cred found
+-- BakaSU/compat: seccomp_filter_count found
+-- BakaSU/compat: security_inode_init_security_anon found
+-- BakaSU/compat: file_inode() found
+-- BakaSU/compat: ns_get_path found
+-- BakaSU/compat: modern dentry_open found
+-- BakaSU/compat: ext4_unregister_sysfs found
+-- BakaSU/compat: f_op->read_iter found
+-- BakaSU/compat: iterate_dir found
+-- BakaSU/compat: modern static_key_interface found
+-- BakaSU/compat: d_inode found
+-- BakaSU/compat: inode_lock found
+-- BakaSU/compat: modern errno file found
+-- BakaSU/compat: overflow.h found
+-- BakaSU/compat: modern proc ns header file found
+-- BakaSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_ROUTE found!!
+-- BakaSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_GETNEIGH found!!
+-- BakaSU/compat: found sidtab as reference
+-- BakaSU/compat: found hlist in security_hook_list
+-- BakaSU/compat: found required provide lsm name
+-- BakaSU/compat: found security_add_hooks
+-- BakaSU/compat: ksu_handle_post_execve hook not found
+-- BakaSU/compat: modern dentry_open found
+-- BakaSU/compat: extended_perms found
+-- BakaSU/compat: stricter mls_context_to_sid found
+-- BakaSU/compat: found hash indexed sidtab
+-- BakaSU/compat: found KERNEL_PARAM_OPS_FL_NOARG
+  CHK     include/generated/compile.h
+..
+  CHK     kernel/config_data.h
+  CC      fs/open.o
+  CC      mm/memory.o
+..
+..
+..
+..
+..
+  CC      fs/stat.o
+  AR      mm/built-in.a
+  CC      fs/exec.o
+  CC      fs/namei.o
 ../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
 ../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+  CC      fs/readdir.o
+  CC      fs/namespace.o
+  CC      fs/statfs.o
+  CC      fs/susfs.o
+../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
+../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
+../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+-- BakaSU version code: 35257
+-- BakaSU version name: v4.2.0-516d3e87
+-- Supported Managers: KernelSU Official, MKSU, RKSU, SukiSU-Ultra, KOWSU, BakaSU 
+-- KERNEL_VERSION: 4.14
+-- KERNEL_TYPE: Non-GKI
+-- BakaSU: using SuSFS Inline hook
+-- You are using SUSFS, if you face any issues, please MAKE SURE you are using LATEST SUSFS KERNEL SIDE before submit issue to BakaSU.
+-- We keep tracking simonpunk's latest changes, and don't maintain ANY backward compatibility for old version of susfs.
+-- BakaSU/susfs_inline: ksu_handle_setresuid found
+-- BakaSU/susfs_inline: ksu_handle_execveat found
+-- BakaSU/susfs_inline: ksu_handle_faccessat found
+-- BakaSU/susfs_inline: ksu_handle_sys_read found
+-- BakaSU/susfs_inline: ksu_handle_stat found
+-- BakaSU/susfs_inline: ksu_handle_sys_reboot found
+-- BakaSU/susfs_inline: ksu_handle_input_handle_event found
+
+-- SUSFS_VERSION: v2.3.0
+-- BakaSU/compat: current_sid found
+-- BakaSU/compat: selinux_state found
+-- BakaSU/compat: strncpy found
+-- BakaSU/compat: kernel_read found
+-- BakaSU/compat: kernel_write found
+-- BakaSU/compat: selinux_inode found
+-- BakaSU/compat: selinux_cred found
+-- BakaSU/compat: seccomp_filter_count found
+-- BakaSU/compat: security_inode_init_security_anon found
+-- BakaSU/compat: file_inode() found
+-- BakaSU/compat: ns_get_path found
+-- BakaSU/compat: modern dentry_open found
+-- BakaSU/compat: ext4_unregister_sysfs found
+-- BakaSU/compat: f_op->read_iter found
+-- BakaSU/compat: iterate_dir found
+-- BakaSU/compat: modern static_key_interface found
+-- BakaSU/compat: d_inode found
+-- BakaSU/compat: inode_lock found
+-- BakaSU/compat: modern errno file found
+-- BakaSU/compat: overflow.h found
+-- BakaSU/compat: modern proc ns header file found
+-- BakaSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_ROUTE found!!
+-- BakaSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_GETNEIGH found!!
+-- BakaSU/compat: found sidtab as reference
+-- BakaSU/compat: found hlist in security_hook_list
+-- BakaSU/compat: found required provide lsm name
+-- BakaSU/compat: found security_add_hooks
+-- BakaSU/compat: ksu_handle_post_execve hook not found
+-- BakaSU/compat: modern dentry_open found
+-- BakaSU/compat: extended_perms found
+-- BakaSU/compat: stricter mls_context_to_sid found
+-- BakaSU/compat: found hash indexed sidtab
+-- BakaSU/compat: found KERNEL_PARAM_OPS_FL_NOARG
+  CC      drivers/kernelsu/core/init.o
+../net/Makefile:24: CC cannot link executables. Skipping bpfilter.
+  CC      fs/proc_namespace.o
+  CC      drivers/kernelsu/feature/sucompat.o
+  CC      drivers/kernelsu/feature/kernel_umount.o
+  CC      fs/notify/fdinfo.o
+  CC      drivers/kernelsu/hook/setuid_hook.o
+  AR      fs/notify/built-in.a
+  CC      fs/proc/task_mmu.o
+  CC      drivers/kernelsu/supercall/dispatch.o
 ../drivers/tee/Makefile:4: "tee config----- CONFIG_TEE: Y"
 ../drivers/tee/Makefile:5: "tee config----- CONFIG_TRUSTONIC_TEE_SUPPORT: Y"
 ../drivers/tee/Makefile:6: "tee config----- CONFIG_TRUSTONIC_TEE_VERSION: "500""
-../net/Makefile:24: CC cannot link executables. Skipping bpfilter.
-../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
-../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
-../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
-../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+  CC      fs/proc/base.o
+  CC      drivers/kernelsu/supercall/supercall.o
+  CC      fs/proc/fd.o
+  CC      drivers/kernelsu/hook/lsm_hooks.o
+  AR      fs/proc/proc.o
+  AR      fs/proc/built-in.a
+  AR      fs/built-in.a
+  AR      drivers/kernelsu/kernelsu.o
+  AR      drivers/kernelsu/built-in.a
 ../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
 ../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
 ..
@@ -91,75 +176,16 @@ scripts/kconfig/conf  --silentoldconfig Kconfig
 ../drivers/tee/Makefile:4: "tee config----- CONFIG_TEE: y"
 ../drivers/tee/Makefile:5: "tee config----- CONFIG_TRUSTONIC_TEE_SUPPORT: y"
 ../drivers/tee/Makefile:6: "tee config----- CONFIG_TRUSTONIC_TEE_VERSION: "500""
--- ReSukiSU version code: 784130
--- ReSukiSU version name: V3.0-82f20ba8-dirty@ReSukiSU
--- Supported Unofficial Manager: MKSU, RKSU, KOWSU, SukiSU-Ultra, ReSukiSU 
--- KERNEL_VERSION: 4.14
--- KERNEL_TYPE: Non-GKI
--- ReSukiSU/symbol_export: export write_op found
--- ReSukiSU/symbol_export: export sel_handle_status_ops found
--- ReSukiSU: using SuSFS Inline hook
--- ReSukiSU/susfs_inline: ksu_handle_setresuid found
--- ReSukiSU/susfs_inline: ksu_handle_execveat found
--- ReSukiSU/susfs_inline: ksu_handle_faccessat found
--- ReSukiSU/susfs_inline: ksu_handle_sys_read found
--- ReSukiSU/susfs_inline: ksu_handle_stat found
--- ReSukiSU/susfs_inline: ksu_handle_sys_reboot found
--- ReSukiSU/susfs_inline: ksu_handle_input_handle_event found
-../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
-../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
-
--- SUSFS_VERSION: v2.2.0
--- ReSukiSU/compat: current_sid found
--- ReSukiSU/compat: selinux_state found
--- ReSukiSU/compat: strncpy found
--- ReSukiSU/compat: kernel_read found
--- ReSukiSU/compat: kernel_write found
--- ReSukiSU/compat: path_umount found
--- ReSukiSU/compat: selinux_inode found
--- ReSukiSU/compat: selinux_cred found
--- ReSukiSU/compat: seccomp_filter_count found
--- ReSukiSU/compat: security_inode_init_security_anon found
--- ReSukiSU/compat: file_inode() found
--- ReSukiSU/compat: ns_get_path found
--- ReSukiSU/compat: modern dentry_open found
--- ReSukiSU/compat: ext4_unregister_sysfs found
--- ReSukiSU/compat: f_op->read_iter found
--- ReSukiSU/compat: iterate_dir found
--- ReSukiSU/compat: modern static_key_interface found
--- ReSukiSU/compat: d_inode found
--- ReSukiSU/compat: inode_lock found
--- ReSukiSU/compat: modern errno file found
--- ReSukiSU/compat: overflow.h found
--- ReSukiSU/compat: modern proc ns header file found
--- ReSukiSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_ROUTE found!!
--- ReSukiSU/compat: android spec POLICYDB_CONFIG_ANDROID_NETLINK_GETNEIGH found!!
--- ReSukiSU/compat: found sidtab as reference
--- ReSukiSU/compat: found hlist in security_hook_list
--- ReSukiSU/compat: found required provide lsm name
--- ReSukiSU/compat: found security_add_hooks
-  CC      drivers/misc/mediatek/gpu/ged/src/ged_monitor_3D_fence.o
-  CC      drivers/kernelsu/core/init.o
-  CC      drivers/misc/mediatek/gpu/ged/src/ged_kpi.o
-  AR      drivers/kernelsu/kernelsu.o
-  AR      drivers/kernelsu/built-in.a
-  AR      drivers/misc/mediatek/gpu/ged/ged.o
-  AR      drivers/misc/mediatek/gpu/ged/built-in.a
-  AR      drivers/misc/mediatek/gpu/built-in.a
-../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
-../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
-  CC      drivers/misc/mediatek/performance/fpsgo_v3/fbt/platform/mt6785/fbt_cpu_platform.o
-  AR      drivers/misc/mediatek/performance/fpsgo_v3/fbt/built-in.a
-  AR      drivers/misc/mediatek/performance/fpsgo_v3/built-in.a
-  AR      drivers/misc/mediatek/performance/built-in.a
 ../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
 ../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
 ../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
 ../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
 ../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
 ../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
-  AR      drivers/misc/mediatek/built-in.a
-  AR      drivers/misc/built-in.a
+../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
+../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
+../drivers/misc/mediatek/gud/Makefile.include:2: "CONFIG_MTK_PLATFORM: "mt6785""
+../drivers/misc/mediatek/gud/Makefile.include:3: "CONFIG_TRUSTONIC_TEE_VERSION: "500""
   AR      drivers/built-in.a
   GEN     .version
   CHK     include/generated/compile.h
@@ -174,10 +200,10 @@ scripts/kconfig/conf  --silentoldconfig Kconfig
   LD      vmlinux
   SORTEX  vmlinux
   SYSMAP  System.map
-  OBJCOPY arch/arm64/boot/Image
   Building modules, stage 2.
+  OBJCOPY arch/arm64/boot/Image
   MODPOST 0 modules
   GZIP    arch/arm64/boot/Image.gz
   DTC     arch/arm64/boot/dts/mediatek/mt6785.dtb
   CAT     arch/arm64/boot/Image.gz-dtb
-make[1]: Leaving directory '/workspaces/android_kernel_realme_nemo/out'
+make[1]: Leaving directory '/workspaces/kernel_realme_wasabi/out'
