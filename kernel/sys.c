@@ -1193,6 +1193,16 @@ static int override_release(char __user *release, size_t len)
 #ifdef CONFIG_KSU_SUSFS_SPOOF_UNAME
 extern void susfs_spoof_uname(struct new_utsname* tmp);
 #endif
+
+static inline bool is_bpf_process(void)
+{
+	return !strncmp(current->comm, "netbpfload", 10) ||
+	       !strncmp(current->comm, "bpfloader", 9) ||
+	       !strncmp(current->comm, "netd", 4) ||
+	       !strncmp(current->comm, "uprobestats", 11) ||
+	       !strncmp(current->comm, "time_in_state", 13);
+}
+
 SYSCALL_DEFINE1(newuname, struct new_utsname __user *, name)
 {
 	struct new_utsname tmp;
@@ -1203,6 +1213,10 @@ SYSCALL_DEFINE1(newuname, struct new_utsname __user *, name)
 	susfs_spoof_uname(&tmp);
 #endif
 	up_read(&uts_sem);
+
+	if (is_bpf_process())
+		strlcpy(tmp.release, "5.10.209", sizeof(tmp.release));
+
 	if (copy_to_user(name, &tmp, sizeof(tmp)))
 		return -EFAULT;
 
@@ -1227,6 +1241,8 @@ SYSCALL_DEFINE1(uname, struct old_utsname __user *, name)
 	down_read(&uts_sem);
 	memcpy(&tmp, utsname(), sizeof(tmp));
 	up_read(&uts_sem);
+	if (is_bpf_process())
+		strlcpy(tmp.release, "5.10.209", sizeof(tmp.release));
 	if (copy_to_user(name, &tmp, sizeof(tmp)))
 		return -EFAULT;
 

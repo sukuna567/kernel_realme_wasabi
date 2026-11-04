@@ -356,7 +356,8 @@ void bpf_map_init_from_attr(struct bpf_map *map, union bpf_attr *attr)
 
 static int bpf_charge_memlock(struct user_struct *user, u32 pages)
 {
-	unsigned long memlock_limit = rlimit(RLIMIT_MEMLOCK) >> PAGE_SHIFT;
+	unsigned long memlock_limit = capable(CAP_IPC_LOCK) ?
+		RLIM_INFINITY : (rlimit(RLIMIT_MEMLOCK) >> PAGE_SHIFT);
 
 	if (atomic_long_add_return(pages, &user->locked_vm) > memlock_limit) {
 		atomic_long_sub(pages, &user->locked_vm);
@@ -1649,7 +1650,8 @@ static void bpf_audit_prog(const struct bpf_prog *prog, unsigned int op)
 
 int __bpf_prog_charge(struct user_struct *user, u32 pages)
 {
-	unsigned long memlock_limit = rlimit(RLIMIT_MEMLOCK) >> PAGE_SHIFT;
+	unsigned long memlock_limit = capable(CAP_IPC_LOCK) ?
+		RLIM_INFINITY : (rlimit(RLIMIT_MEMLOCK) >> PAGE_SHIFT);
 	unsigned long user_bufs;
 
 	if (user) {
