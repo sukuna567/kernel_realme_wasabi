@@ -123,21 +123,11 @@ static struct dentry *proc_uident_instantiate(struct dentry *dentry,
 {
 	const struct uid_entry *u = ptr;
 	struct inode *inode;
+	struct inode *dir = d_inode(dentry->d_parent);
 
-	uid_t uid = name_to_int(&dentry->d_name);
-	kuid_t kuid;
-	bool uid_exists;
-	rt_mutex_lock(&proc_uid_lock);
-	uid_exists = uid_hash_entry_exists_locked(uid);
-	rt_mutex_unlock(&proc_uid_lock);
-	if (uid_exists) {
-		kuid = make_kuid(current_user_ns(), uid);
-		inode = proc_uid_make_inode(dentry->d_sb, kuid);
-		if (!inode)
-			return ERR_PTR(-ENOENT);
-	} else {
+	inode = proc_uid_make_inode(dir->i_sb, dir->i_uid);
+	if (!inode)
 		return ERR_PTR(-ENOENT);
-	}
 
 	inode->i_mode = u->mode;
 	if (S_ISDIR(inode->i_mode))
