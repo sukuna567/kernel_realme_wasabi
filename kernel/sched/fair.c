@@ -145,7 +145,8 @@ unsigned int sysctl_sched_child_runs_first __read_mostly;
 unsigned int sysctl_sched_wakeup_granularity		= 1000000UL;
 unsigned int normalized_sysctl_sched_wakeup_granularity	= 1000000UL;
 
-const_debug unsigned int sysctl_sched_migration_cost	= 500000UL;
+/* Reduce migration cost for faster task promotion to big cores on asymmetric CPU */
+const_debug unsigned int sysctl_sched_migration_cost	= 200000UL;
 
 #ifdef CONFIG_SCHED_WALT
 #ifdef OPLUS_FEATURE_UIFIRST

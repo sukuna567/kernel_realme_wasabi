@@ -81,7 +81,8 @@
  *   dentry1->d_lock
  *     dentry2->d_lock
  */
-int sysctl_vfs_cache_pressure __read_mostly = 100;
+/* Retain cached dentries and inodes longer in memory for faster app launching */
+int sysctl_vfs_cache_pressure __read_mostly = 60;
 EXPORT_SYMBOL_GPL(sysctl_vfs_cache_pressure);
 
 __cacheline_aligned_in_smp DEFINE_SEQLOCK(rename_lock);
